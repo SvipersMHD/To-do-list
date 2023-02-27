@@ -1,0 +1,106 @@
+body {
+    background: rgba(173, 216, 230, 0.547);
+}
+.input__wrapper, .hide, .show, .ask__wrapper {
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.input__wrapper {
+    background: lightblue;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+    
+    h1 {
+        margin-top: 0;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+.input__btn__wrapper {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    position: relative;
+    
+    .error, .error__hide {
+        display: none;
+        position: absolute;
+        bottom: -25px;
+        left: 13%;
+        color: red;
+    }
+    input {
+        padding: 10px;
+        width: 60%;
+        outline: none;
+        border: none;
+    }
+    .btn__add {
+        width: 130px;
+        text-transform: uppercase;
+    }
+}
+.hide, .show {
+    text-align: center;
+    background: rgb(102, 51, 153);
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+    
+    &:hover {
+        background-color: rgb(147, 78, 215);
+    }
+}
+.ask__wrapper {
+    padding: 30px 0;
+    background: white;
+    z-index: 1;
+    position: relative;
+    
+    .ask__box {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+        .ask {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+    .removeall__wrapper {
+        padding-top: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+.btn__removeall, .btn__remove, .btn__add {
+    padding: 10px;
+    background: crimson;
+    border: 1px solid crimson;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+    
+    &:hover {
+        background: white;
+        color: crimson;
+        border: 1px solid crimson;
+    }
+} 
