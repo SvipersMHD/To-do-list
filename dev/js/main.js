@@ -9,6 +9,7 @@ var errorHide = document.querySelector(".error__hide")
 var showDiv = document.createElement(`div`)
 var askDataFromLocalStorage = localStorage.getItem('askData');
 
+// Chargement du localstorage aux chargement de la page 
 if (askDataFromLocalStorage) {
     askWrapper.innerHTML = askDataFromLocalStorage;
 }
@@ -33,7 +34,8 @@ function rajoutTask(){
         // askWrapper.innerHTML += askData
         
         askWrapper.insertAdjacentHTML('afterbegin', askData);
-        localStorage.setItem('askData', askWrapper.innerHTML);
+        // Sauvegarde des données
+        localStorage.setItem('askData', askWrapper.innerHTML); 
         
         var askTranslate = document.querySelector(".ask")
         gsap.fromTo(
